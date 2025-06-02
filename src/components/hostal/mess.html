@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE MESS - KLU Hostels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="mess.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../../assets/piceturs/kllogo.png" alt="KLU Logo">
+                    <h1>KLU MESS</h1>
+                </div>
+                <nav class="nav-links">
+                    <a href="#" class="active" data-page="home-page">Home</a>
+                    <a href="#" data-page="about-page">About</a>
+                    <a href="#" data-page="contact-page">Contact</a>
+                    <a href="#" data-page="fees-page">Hostel-fees</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page active" id="home-page">
+            <div class="container">
+                <div class="main-content">
+                    <div class="welcome-message">
+                        <h2>Welcome to KLU Hostel</h2>
+                        <p>Your one-stop solution for all hostel mess services at KL University</p>
+                    </div>
+                    <div class="date-display" id="current-date">
+                        <!-- Date will be populated by JavaScript -->
+                    </div>
+                    <h2 class="section-title">Select Your Hostel</h2>
+                    <div class="hostels-grid">
+                        <!-- Hostel cards will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page inactive" id="menu-page">
+            <div class="container">
+                <div class="main-content">
+                    <div class="menu-header">
+                        <h2 class="section-title">Today's Menu</h2>
+                        
+                        <div class="menu-tabs">
+                            <button class="tab-button active" data-meal="breakfast">Breakfast</button>
+                            <button class="tab-button" data-meal="lunch">Lunch</button>
+                            <button class="tab-button" data-meal="snacks">Snacks</button>
+                            <button class="tab-button" data-meal="dinner">Dinner</button>
+                           
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <!-- Menu items, cuisine selector, and week nav will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page inactive" id="about-page">
+            <div class="container">
+                <div class="main-content">
+                    <button class="back-button back-to-hostels-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Hostels
+                    </button>
+                    <h2 class="section-title"><br>DO'S & DON'TS OF HOSTEL</h2>
+                    <div class="rules-container">
+                        <div class="rules-section">
+                            <h3>General Rules</h3>
+                            <ol>
+                                <li>Students must maintain dignity and discipline while staying in the hostel. They must obey the hostel warden/floor in-charges.</li>
+                                <li>Valuable items like gold should not be kept in the hostel. Students are responsible for their laptops and money. Management will not be responsible for any losses.</li>
+                                <li>Students must inform hostel authorities before filing police complaints for any losses.</li>
+                                <li>Students are strictly prohibited from possessing or using cigarettes, beer, alcohol, gutka, drugs, etc.</li>
+                                <li>Students must hand over room keys to security when leaving and collect them upon return.</li>
+                                <li>Students must switch off fans, lights, geysers, A/Cs, etc., before leaving their rooms.</li>
+                            </ol>
+                        </div>
+
+                        <div class="rules-section">
+                            <h3>Visitors & Timings</h3>
+                            <ol>
+                                <li>Visitors are not allowed into the hostel. They can meet in the visitor's hall with prior permission from the warden.</li>
+                                <li>Only family members listed by parents are allowed to contact students.</li>
+                                <li>Visiting hours are up to 7:30 PM only.</li>
+                                <li>1st-year students must return to hostel by 3:00 PM, others by 6:00 PM.</li>
+                                <li>Students using computer lab/library after specified times must submit permission slips to security.</li>
+                            </ol>
+                        </div>
+
+                        <div class="rules-section">
+                            <h3>Study Hours & Discipline</h3>
+                            <ol>
+                                <li>Strict study hours from 7:30 PM to 10:30 PM must be maintained.</li>
+                                <li>Students must be in their allotted rooms during study hours.</li>
+                                <li>Complaints must be registered in the complaint register at the hostel office.</li>
+                                <li>Students must maintain regular college attendance.</li>
+                                <li>Students are not allowed to stay in hostel during college working hours without prior permission.</li>
+                            </ol>
+                        </div>
+
+                        <div class="rules-section">
+                            <h3>Room Maintenance & Restrictions</h3>
+                            <ol>
+                                <li>Students must clean their rooms and dispose of waste in corridor bins.</li>
+                                <li>Fine of Rs.100/- for unclean rooms during inspection.</li>
+                                <li>Electrical appliances like water heaters are prohibited.</li>
+                                <li>Electronic gadgets like tape recorders, video games are not allowed.</li>
+                                <li>Laptops are permitted for academic purposes only.</li>
+                                <li>Generator facility is available from 6:00 PM to 11:00 PM for lighting and fans.</li>
+                            </ol>
+                        </div>
+
+                        <div class="rules-section">
+                            <h3>Mess Rules</h3>
+                            <ol>
+                                <li>Hostel inmates must not remove any mess items (glasses, plates, etc.).</li>
+                                <li>First violation: Fine of Rs.100/-</li>
+                                <li>Second violation: Fine of Rs.300/-</li>
+                                <li>Third violation: Expulsion from hostel</li>
+                            </ol>
+                        </div>
+
+                        <div class="rules-section">
+                            <h3>Important Notes</h3>
+                            <ol>
+                                <li>Ragging is strictly prohibited as per the Ragging Act 1997.</li>
+                                <li>Violation can result in imprisonment, fine up to Rs.10,000/-, and dismissal.</li>
+                                <li>Cell phones are strictly prohibited in the hostel.</li>
+                                <li>Unauthorized cell phone usage will result in seizure and Rs.500/- fine.</li>
+                                <li>TV viewing is allowed only between 5:00 PM to 7:30 PM on regular days.</li>
+                                <li>TV is completely stopped during examinations.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <a href="#" class="back-to-home" data-page="home-page"><i class="fas fa-home"></i> Back to Home</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page inactive" id="fees-page">
+            <div class="container">
+                <div class="main-content">
+                    <button class="back-button back-to-hostels-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Hostels
+                    </button>
+                    <h2 class="section-title">Hostel Fees</h2>
+                    <div class="fees-container">
+                        <div class="fees-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Important Notice:</strong> The fee structure provided here is for reference purposes only. Fees and charges are subject to change. For the most up-to-date information and any queries regarding hostel fees, please contact your counselor or KLU Management directly.
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S No</th>
+                                    <th>Type of Room</th>
+                                    <th>MESS FEE (INR)</th>
+                                    <th>GST 5%</th>
+                                    <th>Room Rent (INR)</th>
+                                    <th>SINGLE INSTALMENT (At the time of Academic Year Registration) (INR)</th>
+                                    <th>2 INSTALMENTS (Each Instalment Fee at the time of semester registration) (INR)</th>
+                                    <th>ELECTRICITY DEPOSIT (INR)</th>
+                                    <th>Registration fee one time only (Non Refundable) for newly admitted studenth (INR)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Non-Ac Room with Common Toilet (4-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>35000</td>
+                                    <td>128975</td>
+                                    <td>66000</td>
+                                    <td>4000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Non A/C Common Toilet (3-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>40000</td>
+                                    <td>133975</td>
+                                    <td>68500</td>
+                                    <td>4000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Non-A/C Room with Common Toilet (1-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>50000</td>
+                                    <td>143975</td>
+                                    <td>73500</td>
+                                    <td>4000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Non A/C Attached (4-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>40000</td>
+                                    <td>133975</td>
+                                    <td>68500</td>
+                                    <td>4000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Non A/C Attached (3-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>45000</td>
+                                    <td>138975</td>
+                                    <td>71000</td>
+                                    <td>4000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Non A/C Attached (2-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>50000</td>
+                                    <td>143975</td>
+                                    <td>73500</td>
+                                    <td>4000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>A/C Common Toilet (4-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>45000</td>
+                                    <td>138975</td>
+                                    <td>71000</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>A/C Common Toilet (3-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>50000</td>
+                                    <td>143975</td>
+                                    <td>73500</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>A/C Attached (4-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>50000</td>
+                                    <td>143975</td>
+                                    <td>73500</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>A/C Attached (3-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>55000</td>
+                                    <td>148975</td>
+                                    <td>76000</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>A/C Attached (2-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>60000</td>
+                                    <td>153975</td>
+                                    <td>78500</td>
+                                    <td>15000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>A/C Deluxe Room with Attached Toilet without Study Room (4 Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>55000</td>
+                                    <td>148975</td>
+                                    <td>76000</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>A/C Deluxe Room with Attached Toilet without Study Room (3 Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>60000</td>
+                                    <td>153975</td>
+                                    <td>78500</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>A/C Deluxe Room with Attached Toilet with Study Room (4-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>58000</td>
+                                    <td>151975</td>
+                                    <td>77500</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>A/C Deluxe Room with Attached Toilet with Study Room (3-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>63000</td>
+                                    <td>156975</td>
+                                    <td>80000</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>A/C Deluxe (2-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>65000</td>
+                                    <td>158975</td>
+                                    <td>81000</td>
+                                    <td>15000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>A/C Super Deluxe Room wth Attached Toilet (3-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>70000</td>
+                                    <td>163975</td>
+                                    <td>83500</td>
+                                    <td>12000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>A/C Super Deluxe Room with Attached Toilet (2-Bed)</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>75000</td>
+                                    <td>168975</td>
+                                    <td>86000</td>
+                                    <td>15000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>Suites 3 Bed Non AC</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>72000</td>
+                                    <td>165975</td>
+                                    <td>84500</td>
+                                    <td>5000</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>Suites 3 Bed AC</td>
+                                    <td>89500</td>
+                                    <td>4475</td>
+                                    <td>82000</td>
+                                    <td>175975</td>
+                                    <td>89500</td>
+                                    <td>15000</td>
+                                    <td>5000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>1.For mess charges, GST ,establishment charges to be paid through DD or Online in favour of "HARNIKS INFRA LLP" Payable at vijayawada.</p>
+                        <p>2.Room rent, electricity, Registration & caution deposit to be paid thorugh DD /online in favour of "KL UNIVERSITY" Payable at vijayawada.</p>
+                        <p>3.Hostel applications are available at Help Desk Or download from www.kluniversity.in</p>
+                        <p>4.For all type of rooms,electrical charges to be paid extra through prepaid meters and will be adjusted from electricity deposit.</p>
+                        <p>5.Rooms are alloted on First Come first serve basis and subject to availabilty.</p>
+                        <p>* Harniks Infra LLP and Harniks Regency are providing Training in the area of engineering and management along with Technical, Educational consultancy and auxiliary educational services for our KLEF Deemed to be University and Our students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="mess.js" type="module"></script>
+</body>
+</html>

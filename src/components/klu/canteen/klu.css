@@ -1,0 +1,214 @@
+:root {
+    --klu-red: #d22630;
+    --klu-dark-red: #b01e27;
+    --light-gray: #f8f9fa;
+    --dark-gray: #333;
+    --white: #fff;
+    --accent-color: #ffcc00;
+    --transition-speed: 0.4s;
+    --page-transition: 0.6s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transition: all var(--transition-speed);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center; /* Center logo and title */
+    align-items: center;
+    padding: 15px 0;
+    flex-direction: column; /* Stack logo and title vertically */
+    gap: 10px; /* Add spacing between logo and title */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack logo image and h1 vertically */
+    gap: 10px; /* Add spacing between image and h1 */
+}
+
+.logo img {
+    height: 70px; /* Adjust logo size */
+    width: auto;
+    transition: transform var(--transition-speed);
+}
+
+.logo h1 {
+    color: var(--klu-red);
+    font-size: 32px; /* Adjust title size */
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 40px 0;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--klu-red);
+}
+
+/* Canteen Table Styles */
+.canteen-container {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.canteen-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.canteen-container th,
+.canteen-container td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.canteen-container th {
+    background-color: var(--klu-red);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.canteen-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.canteen-container tr:hover {
+    background-color: #f5f5f5;
+}
+
+.canteen-container td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.canteen-container td a:hover {
+    text-decoration: underline;
+}
+
+.canteen-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--dark-gray);
+}
+
+/* Back Button */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: var(--klu-red);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    background-color: var(--klu-dark-red);
+    transform: translateY(-2px);
+}
+
+/* Page System */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .logo img {
+        height: 60px;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .canteen-container {
+        padding: 15px;
+    }
+
+    .canteen-container table,
+    .canteen-container th,
+    .canteen-container td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .back-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

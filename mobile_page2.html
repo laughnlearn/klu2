@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Page 2 - All-in-One KLU Hub</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="src/assets/piceturs/KLERP.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .mobile-container {
+            position: relative;
+            min-height: 100vh;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .mobile-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .news-scroll {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .news-scroll p {
+            color: #1a2a6c;
+            font-weight: 500;
+            margin: 0;
+            text-align: center;
+        }
+
+        .mobile-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .mobile-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-box:nth-child(1) { animation-delay: 0.1s; }
+        .mobile-box:nth-child(2) { animation-delay: 0.2s; }
+        .mobile-box:nth-child(3) { animation-delay: 0.3s; }
+        .mobile-box:nth-child(4) { animation-delay: 0.4s; }
+        .mobile-box:nth-child(5) { animation-delay: 0.5s; }
+        .mobile-box:nth-child(6) { animation-delay: 0.6s; }
+
+        .mobile-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .mobile-box a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .mobile-box img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .mobile-box span {
+            display: block;
+            color: #1a2a6c;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+
+        .mobile-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-button.small {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .mobile-nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .next-page-button {
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .next-page-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .next-page-button.small {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="content-wrapper">
+            <!-- Scrolling News Section -->
+            <div class="news-scroll">
+                <p>🔔 Latest News: "All the best for your exams"</p>
+            </div>
+
+            <div class="mobile-grid">
+                <!-- KL Eats Box -->
+                <div class="mobile-box">
+                    <a href="https://kleats.in/" target="_blank">
+                        <img src="src/assets/piceturs/kleats.png" alt="KL Eats">
+                        <span>🍔 KL Eats</span>
+                    </a>
+                    <a href="https://kleats.in/" target="_blank" class="mobile-button small">Order Food</a>
+                </div>
+
+                <!-- Hostel Box -->
+                <div class="mobile-box">
+                    <a href="src/components/hostal/mess.html">
+                        <img src="src/assets/piceturs/tulip.jpg" alt="Hostel">
+                        <span>🏨 Hostel Services</span>
+                    </a>
+                    <a href="src/components/hostal/mess.html" class="mobile-button small">View Details</a>
+                </div>
+
+                <!-- Promotions Box -->
+                <div class="mobile-box">
+                    <a href="src/components/promo/promo.html">
+                        <img src="src/assets/piceturs/promo.png" alt="Promotions">
+                        <span>📣 Promotions</span>
+                    </a>
+                    <a href="src/components/promo/promo.html" class="mobile-button small">View Offers</a>
+                </div>
+
+                <!-- Bus Box -->
+                <div class="mobile-box">
+                    <a href="src/components/klu/bus/bus.html">
+                        <span style="font-size: 40px;">🚌</span>
+                        <span>🚌 Bus Services</span>
+                    </a>
+                    <a href="src/components/klu/bus/bus.html" class="mobile-button small">View Bus</a>
+                </div>
+
+                <!-- Canteen Box -->
+                <div class="mobile-box">
+                    <a href="src/components/klu/canteen/klu.html">
+                        <img src="src/assets/piceturs/canteen.jpg" alt="Canteen">
+                        <span>🍽️ Canteen</span>
+                    </a>
+                    <a href="src/components/klu/canteen/klu.html" class="mobile-button small">View Canteen</a>
+                </div>
+
+                <!-- About KLU Box -->
+                <div class="mobile-box">
+                    <a href="src/components/klu/aboutklu/aboutklu.html">
+                        <span style="font-size: 40px;">🏫</span>
+                        <span>🏫 About KLU</span>
+                    </a>
+                    <a href="src/components/klu/aboutklu/aboutklu.html" class="mobile-button small">Learn More</a>
+                </div>
+
+                <!-- About Us Box -->
+                <div class="mobile-box">
+                    <a href="src/components/about/about.html">
+                        <span style="font-size: 40px;">ℹ️</span>
+                        <span>ℹ️ About Us</span>
+                    </a>
+                    <a href="src/components/about/about.html" class="mobile-button small">Learn More</a>
+                </div>
+
+                <!-- WhatsApp Channel Box -->
+                <div class="mobile-box">
+                    <a href="https://whatsapp.com/channel/0029VahZYatElagxeLkcLD2B" target="_blank">
+                        <img src="src/assets/piceturs/whatsapp.png" alt="WhatsApp Channel">
+                        <span>Be a part of our WhatsApp Channel</span>
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029VahZYatElagxeLkcLD2B" target="_blank" class="mobile-button small">Join Channel</a>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="mobile-nav-buttons">
+                <a href="index.html" class="next-page-button small">Previous page</a>
+                <a href="index.html" class="next-page-button small">Main page</a>
+                <a href="mobile_page3.html" class="next-page-button small">Next page</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

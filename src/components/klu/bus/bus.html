@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLU Bus Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../index.css">
+    <link rel="stylesheet" href="bus.css">
+</head>
+<body>
+    <div class="bus-container">
+        <header id="header">
+            <div class="container">
+                
+                    
+                    <nav class="nav-links">
+                        <a href="#" class="active" data-page="home-page">Home</a>
+                    </nav>
+                
+            </div>
+        </header>
+
+        <main>
+            <div class="page active" id="home-page">
+                <div class="container">
+                    <div class="main-content">
+                        <div class="welcome-message">
+                            <h2>Welcome to KLU Bus Services</h2>
+                            <p>Your reliable transportation service at KL University</p>
+                        </div>
+                        <div class="date-display" id="current-date">
+                            <!-- Date will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="home-page-links">
+                            <a href="#" data-page="routes-page">Routes</a>
+                            <a href="#" data-page="contact-page">Contact</a>
+                        </div>
+
+                        <button class="back-button back-to-main-btn">
+                            <i class="fas fa-arrow-left"></i> Back to Main Page
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page inactive" id="routes-page">
+                <div class="container">
+                    <div class="main-content">
+                        <button class="back-button back-to-home-btn">
+                            <i class="fas fa-arrow-left"></i> Back to Home
+                        </button>
+                        <h2 class="section-title">Bus Routes</h2>
+                        
+                        <div class="route-navigation">
+                            <button class="route-nav-btn active" data-location="all">All Routes</button>
+                            <button class="route-nav-btn" data-location="guntur">Guntur</button>
+                            <button class="route-nav-btn" data-location="vijayawada">Vijayawada</button>
+                            <button class="route-nav-btn" data-location="tenali">Tenali</button>
+                            <button class="route-nav-btn" data-location="thulluru">Thulluru</button>
+                        </div>
+
+                        <div class="routes-table-container">
+                            <table id="routes-table">
+                                <thead>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Shift</th>
+                                        <th>Location</th>
+                                        <th>Route No.</th>
+                                        <th>Route Name</th>
+                                        <th>Timing</th>
+                                        <th>Stages</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="routes-table-body">
+                                    <!-- Routes will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page inactive" id="contact-page">
+                <div class="container">
+                    <div class="main-content">
+                        <button class="back-button back-to-home-btn">
+                            <i class="fas fa-arrow-left"></i> Back to Home
+                        </button>
+                        <h2 class="section-title">Bus Service Contact Details</h2>
+                        <div class="contact-container">
+                            <div class="contact-warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <strong>Important Notice:</strong> For any bus-related issues or queries, please contact the respective personnel based on your concern. For emergency situations, please contact the transport supervisor immediately.
+                            </div>
+                            <table class="contact-table">
+                                <thead>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Description</th>
+                                        <th>Contact Person</th>
+                                        <th>Designation</th>
+                                        <th>Email Id</th>
+                                        <th>Phone Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Rash Driving, Overspeed, Traffic rules violation, mobile phone usage while driving</td>
+                                        <td>Dr.A V S Ram Prasad</td>
+                                        <td>Associate Dean-Student Affairs</td>
+                                        <td>avsrp_me@kluniversity.in</td>
+                                        <td>99599 62345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Student transport related issues</td>
+                                        <td>Dr.K.Ravindranath</td>
+                                        <td>Associate Dean-Student Affairs</td>
+                                        <td>ravindra_ist@kluniversity.in</td>
+                                        <td>99497 20555</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>General Enquiries</td>
+                                        <td>Mr.M.Susai</td>
+                                        <td>Supervisor-Transport</td>
+                                        <td>transport@kluniversity.in</td>
+                                        <td>80964 93333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Bus Route Supervisor (Vijayawada)</td>
+                                        <td>Mr. G H V S S Narayana</td>
+                                        <td>Supervisor-Vijayawada Buses</td>
+                                        <td>transport@kluniversity.in</td>
+                                        <td>91770 88148</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Bus Route Supervisor (Guntur)</td>
+                                        <td>Mr. M Narasimha Rao</td>
+                                        <td>Supervisor-Guntur Buses</td>
+                                        <td>transport@kluniversity.in</td>
+                                        <td>97059 59121</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Bus Route Supervisor (Tenali)</td>
+                                        <td>Mr. P. Anjaneyulu</td>
+                                        <td>Supervisor-Tenali Buses</td>
+                                        <td>transport@kluniversity.in</td>
+                                        <td>96034 76072</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="bus.js"></script>
+</body>
+</html> 

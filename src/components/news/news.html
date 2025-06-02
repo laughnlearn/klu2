@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College News</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+    <div class="news-container">
+        <h1>College News & Updates</h1>
+        
+        <div class="news-grid">
+            <div class="news-item">
+                <h2 class="news-title">FSAD in sem lab-2</h2>
+                <div class="news-date">April 03, 2025</div>
+                <div class="news-content">
+                    Dear Students,
+
+                    Your 23SDCS12A/R - FSAD - In Sem II Lab Exam - Schedule from  07.04.2025 to 12.04.2025 on your lab session.
+                    
+                    Instructions to Students
+                    --------------------------------
+                    
+                    Students will get the question in LMS, they need to copy the question in paper.
+                    
+                    Once the question is written in the script, the laptop/system need to be closed.
+                    
+                    The program need to be written in the answer script and students need to get the proceed sign from the invigilator.
+                    
+                    Once the proceed sign made, students can open the laptop and start the execution.
+                    
+                    After execution, get the executed, partially executed status from the invigilator and submit the paper at last.
+                    
+                    Every students must sign the attendance sheet during the lab.
+                    
+                    The viva quiz will be conducted in LMS on same session for 5 min. You should submit the exam scripts before last 10 min and then you can open the quiz to complete.
+                    
+                    All the best, prepare well
+                    
+                    Thank You                </div>
+            </div>
+
+            <div class="news-item">
+                <h2 class="news-title">change of specialization</h2>
+                <div class="news-date">April 04 2025(last date)</div>
+                <div class="news-content">
+                    Dear Students,
+                    As you are aware, the provision to select your Specialization or Minor Degree was already made available at the end of your first year of study. A majority of students have already submitted their choices through the academic portal.
+                    This is to inform you that the portal has now been reopened to give you an opportunity to make informed changes to your earlier choices, based on:
+                    Your learning and interests developed till date
+                    Insights gained from the recent academic flexibilities                </div>
+            </div>
+
+            <div class="news-item">
+                <h2 class="news-title">Exam fees </h2>
+                <div class="news-date">April 05, 2025(last date)</div>
+                <div class="news-content">
+                    The Regular examinations for the Y21, Y22, Y23 & Y24_B.Tech programs will commence from 28/04/2025 as per the time tables. All Regular candidates appearing for the examinations have to register by due date by paying Rs.250/- per course.
+                    Registration and Payment of Fee can be done through ERP. Follow the instructions carefully and register online by submitting your application & Payment through Debit card /Credit card/Net Banking.
+                    Important Dates:
+                    Last date for online registration of the filled in Application forms without fine 05/04/2025 Last date for online registration of the filled in application forms with a fine of 10/04/2025
+                    Rs.200/- per day.
+                    II K-Pop Jans
+                    Hall Tickets can be downloaded online.
+                    NOTE:
+                    1. Fee once paid will not be refunded under any circumstances.
+
+                </div>
+            </div>
+        </div>
+
+        <a href="/index.html" class="home-button">Go to Home</a>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.news-content').forEach(content => {
+            if (content.scrollHeight > 100) {
+                const btn = document.createElement('div');
+                btn.className = 'expand-btn';
+                content.parentNode.insertBefore(btn, content.nextSibling);
+                
+                btn.addEventListener('click', () => {
+                    content.classList.toggle('expanded');
+                    btn.classList.toggle('expanded');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - All-in-One KLU Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .mobile-container {
+            position: relative;
+            min-height: 100vh;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .mobile-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            height: 250px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .box:nth-child(1) { animation-delay: 0.1s; }
+        .box:nth-child(2) { animation-delay: 0.2s; }
+        .box:nth-child(3) { animation-delay: 0.3s; }
+        .box:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box-content {
+            text-align: center;
+            width: 100%;
+        }
+
+        .box-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #1a2a6c;
+            font-weight: 500;
+        }
+
+        .box-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .box-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .navigation-buttons {
+            position: fixed;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            padding: 20px;
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                gap: 15px;
+            }
+
+            .box {
+                height: 200px;
+            }
+
+            .box-title {
+                font-size: 1.3em;
+            }
+
+            .box-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .nav-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="container">
+            <div class="box">
+                <div class="box-content">
+                    <h2 class="box-title">Attendance Portal</h2>
+                    <a href="https://likithkandepu13.github.io/attendance/" class="box-button" target="_blank">Visit Portal</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    <h2 class="box-title">GPA Calculator</h2>
+                    <a href="https://tools.anreddy.in/gpa-calculator/klu" class="box-button" target="_blank">Calculate GPA</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    <h2 class="box-title">Coursera</h2>
+                    <a href="https://www.coursera.org/" class="box-button" target="_blank">Start Learning</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    <h2 class="box-title">CodeChef</h2>
+                    <a href="https://www.codechef.com/login" class="box-button" target="_blank">Practice Coding</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-buttons">
+            <a href="mobile_page2.html" class="nav-button">Previous</a>
+            <a href="index.html" class="nav-button">Main Page</a>
+            <a href="mobile_page4.html" class="nav-button">Next</a>
+        </div>
+    </div>
+</body>
+</html>
+

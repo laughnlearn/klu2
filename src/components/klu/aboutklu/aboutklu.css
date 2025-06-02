@@ -1,0 +1,303 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f6f9fc 0%, #eef2f7 100%);
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Styles */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+section:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2d3436;
+    margin-bottom: 25px;
+    font-size: 2em;
+    border-bottom: 3px solid #4b6cb7;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    transition: width 0.3s ease;
+}
+
+section:hover h2::after {
+    width: 100px;
+}
+
+section h3 {
+    color: #4b6cb7;
+    margin: 25px 0 20px;
+    font-size: 1.6em;
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: translateX(10px);
+}
+
+li i {
+    margin-right: 15px;
+    color: #4b6cb7;
+    font-size: 1.2em;
+}
+
+/* Paragraph Styles */
+p {
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.8;
+    color: #2d3436;
+}
+
+/* Back Button Styles */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    box-shadow: 0 5px 15px rgba(75, 108, 183, 0.3);
+}
+
+.back-button i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(75, 108, 183, 0.4);
+}
+
+.back-button:hover i {
+    transform: translateX(-5px);
+}
+
+/* More Details Section */
+.more-details {
+    text-align: center;
+    padding: 3rem;
+    margin: 3rem 0;
+    background: linear-gradient(135deg, #f6f9fc 0%, #eef2f7 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.more-details h2 {
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    font-size: 2.2em;
+}
+
+.more-details p {
+    margin-bottom: 2rem;
+    color: #636e72;
+    font-size: 1.1em;
+}
+
+.official-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(75, 108, 183, 0.3);
+}
+
+.official-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(75, 108, 183, 0.4);
+}
+
+.official-link i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.official-link:hover i {
+    transform: translateX(-5px);
+}
+
+/* Back Home Section */
+.back-home {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 1.5rem;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(75, 108, 183, 0.3);
+}
+
+.home-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(75, 108, 183, 0.4);
+}
+
+.home-button i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.home-button:hover i {
+    transform: translateX(-5px);
+}
+
+/* Enhanced Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Staggered animation for sections */
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+section:nth-child(5) { animation-delay: 0.5s; }
+section:nth-child(6) { animation-delay: 0.6s; }
+section:nth-child(7) { animation-delay: 0.7s; }
+section:nth-child(8) { animation-delay: 0.8s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 40px 0;
+        border-radius: 15px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    section {
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+    
+    .back-button, .official-link, .home-button {
+        padding: 12px 24px;
+    }
+}
