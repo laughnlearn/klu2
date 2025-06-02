@@ -833,7 +833,7 @@ function filterHostels(category) {
 // Add back to home button
 function addBackToHomeButton() {
     const backButton = document.createElement('a');
-    backButton.href = '../../../../mobile_page2.html';
+    backButton.href = '../../../mobile_page2.html';
     backButton.className = 'back-to-home';
     backButton.innerHTML = '<i class="fas fa-home"></i> Back to Home';
     
