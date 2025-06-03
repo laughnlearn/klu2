@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College News</title>
     <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="news-container">
         <h1>College News & Updates</h1>
         
+        <button class="back-button back-to-prev-page">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+
         <div class="news-grid">
             <div class="news-item">
                 <h2 class="news-title">FSAD in sem lab-2</h2>
@@ -69,12 +74,20 @@
                 </div>
             </div>
         </div>
-
-        <a href="../../index.html" class="home-button">Go to Home</a>
     </div>
 
-
     <script>
+        // Initialize back button functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const backButton = document.querySelector('.back-to-prev-page');
+
+            if (backButton) {
+                backButton.addEventListener('click', () => {
+                    history.back(); // Go back to the previous page in history
+                });
+            }
+        });
+
         document.querySelectorAll('.news-content').forEach(content => {
             if (content.scrollHeight > 100) {
                 const btn = document.createElement('div');
