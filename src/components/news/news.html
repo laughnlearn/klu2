@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <a href="../../index.html" class="home-button">Go to Home</a>
+        <a href="../../index.html" class="home-button" onclick="handleHomeClick(event)">Go to Home</a>
     </div>
 
 
@@ -87,6 +87,16 @@
                 });
             }
         });
+
+        function handleHomeClick(event) {
+            event.preventDefault();
+            const isMobile = window.innerWidth <= 768; // Standard mobile breakpoint
+            if (isMobile) {
+                window.location.href = '../../index.html#mobile';
+            } else {
+                window.location.href = '../../index.html#desktop';
+            }
+        }
     </script>
 </body>
 </html>
