@@ -838,7 +838,7 @@ function addBackToHomeButton() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     
     // Set the appropriate path based on device type
-    backButton.href = isMobile ? '/klu2/mobile_page2.html' : '/index.html';
+    backButton.href = isMobile ? '/klu2/mobile_page2.html' : 'https://laughnlearn.github.io/klu2/';
     
     backButton.className = 'back-to-home';
     backButton.innerHTML = '<i class="fas fa-home"></i> Back to Home';
