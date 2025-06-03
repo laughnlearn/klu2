@@ -30,7 +30,20 @@
              with you — and the best part? Our promotions are completely
              free for everyone!"</p>
         
-        <a href='/klu2/mobile_page2.html' class="home-button">Back to Home</a>
+        <a href="#" id="backButton" class="home-button">Back to Home</a>
     </div>
+
+    <script>
+        // Add back to home button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.getElementById('backButton');
+            
+            // Detect if the device is mobile
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            // Set the appropriate path based on device type
+            backButton.href = isMobile ? '/klu2/mobile_page2.html' : 'https://laughnlearn.github.io/klu2/';
+        });
+    </script>
 </body>
 </html>
