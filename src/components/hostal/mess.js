@@ -833,7 +833,13 @@ function filterHostels(category) {
 // Add back to home button
 function addBackToHomeButton() {
     const backButton = document.createElement('a');
-    backButton.href = '/klu2/mobile_page2.html';
+    
+    // Detect if the device is mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    // Set the appropriate path based on device type
+    backButton.href = isMobile ? '/klu2/mobile_page2.html' : '/index.html';
+    
     backButton.className = 'back-to-home';
     backButton.innerHTML = '<i class="fas fa-home"></i> Back to Home';
     
