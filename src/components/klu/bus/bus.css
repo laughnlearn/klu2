@@ -679,4 +679,24 @@ header {
         width: 100%;
         text-align: center;
     }
+}
+
+/* Home Button Styles */
+.home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--klu-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-button:hover {
+    background-color: var(--klu-dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 } 
