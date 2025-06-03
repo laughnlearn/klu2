@@ -331,28 +331,5 @@
             <a href="./mobile_page2.html" class="next-page-button">Go to Next Page</a>
         </div>
     </div>
-
-    <script>
-        // Function to handle interface switching
-        function handleInterface() {
-            const isMobile = window.innerWidth <= 768;
-            const hash = window.location.hash;
-            
-            // Show/hide appropriate interface
-            if (hash === '#mobile' || (isMobile && !hash)) {
-                document.querySelector('.wrapper').style.display = 'none';
-                document.querySelector('.mobile-container').style.display = 'block';
-            } else if (hash === '#desktop' || (!isMobile && !hash)) {
-                document.querySelector('.wrapper').style.display = 'block';
-                document.querySelector('.mobile-container').style.display = 'none';
-            }
-        }
-
-        // Run on page load
-        handleInterface();
-
-        // Run on window resize
-        window.addEventListener('resize', handleInterface);
-    </script>
 </body>
 </html>
