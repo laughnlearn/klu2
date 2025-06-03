@@ -265,7 +265,7 @@ function showMenu(hostelId) {
         backButton.className = 'back-button';
         backButton.innerHTML = '<i class="fas fa-arrow-left"></i> Back to Hostels';
         menuContent.appendChild(backButton);
-        backButton.onclick = () => showPage('home-page');
+        backButton.onclick = () => history.back();
 
         // Create and insert cuisine selector
         const cuisineSelector = document.createElement('div');
@@ -378,7 +378,7 @@ function showMenu(hostelId) {
         backButton.className = 'back-button';
         backButton.innerHTML = '<i class="fas fa-arrow-left"></i> Back to Hostels';
         menuContent.appendChild(backButton);
-        backButton.onclick = () => showPage('home-page');
+        backButton.onclick = () => history.back();
 
         // Display no menu message
         const noMenuMessage = document.createElement('div');
@@ -761,7 +761,7 @@ function addEventListeners() {
     // Back to Hostels button clicks (for About and Contact pages)
     document.addEventListener('click', (event) => {
         if (event.target.closest('.back-to-hostels-btn')) {
-            showPage('home-page');
+            history.back();
         }
     });
 }
@@ -833,16 +833,15 @@ function filterHostels(category) {
 // Add back to home button
 function addBackToHomeButton() {
     const backButton = document.createElement('a');
-    
-    // Detect if the device is mobile
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
-    // Set the appropriate path based on device type
-    backButton.href = isMobile ? '/klu2/mobile_page2.html' : 'https://laughnlearn.github.io/klu2/';
-    
     backButton.className = 'back-to-home';
     backButton.innerHTML = '<i class="fas fa-home"></i> Back to Home';
     
     const mainContent = document.querySelector('.main-content');
     mainContent.appendChild(backButton);
+
+    // Add click event listener directly to the created button
+    backButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        history.back();
+    });
 }
